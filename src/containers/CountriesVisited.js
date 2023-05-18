@@ -1,8 +1,7 @@
-const CountriesVisited = () => {
+const CountriesVisited = ({country}) => {
     return ( 
         <>
-        <h4>Visited Countries</h4>
-        <p> Hi from visited countries </p>
+        <li> visitedCountries? {country.name.common + " " + country.flag + " "}</li>
         </>
      );
 }
