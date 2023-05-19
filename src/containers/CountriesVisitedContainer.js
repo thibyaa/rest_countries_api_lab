@@ -1,11 +1,9 @@
 // import Country from "../components/Country";
 import Country from "../components/Country";
 
-const CountriesVisitedContainer = ({visitedCountries, setVisitedCountries}) => {
+const CountriesVisitedContainer = ({visitedCountries}) => {
 
-  const mapVisitedCountries = visitedCountries.map(country => {
-  <Country country={country} visitedCountries={visitedCountries} setVisitedCountries={setVisitedCountries} /> 
-})
+  const mapVisitedCountries = visitedCountries.map(country => <Country country={country}/>)
 
   return (
     <>

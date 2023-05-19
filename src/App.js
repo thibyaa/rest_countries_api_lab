@@ -4,7 +4,7 @@ import CountriesContainer from "./containers/CountriesContainer";
 import CountriesVisitedContainer from "./containers/CountriesVisitedContainer";
 
 function App() {
-  const [countries, setCountries] = useState(null);
+  const [countries, setCountries] = useState([]);
   const [visitedCountries, setVisitedCountries] = useState([]);
 
   useEffect(() => {
@@ -18,11 +18,16 @@ function App() {
       fetchCountry();
   }, []);
 
+  // const handleChange = (country) => {
+  //   if(visitedCountries) setVisitedCountries([...visitedCountries, country]);
+  // };
+
   return (
     <>
       <h1> Country Bucket List </h1>
-      <CountriesContainer countries={countries}/>
-      <CountriesVisitedContainer visitedCountries={visitedCountries} setVisitedCountries={setVisitedCountries}/>
+      <CountriesContainer countries={countries} visitedCountries={visitedCountries} setVisitedCountries={setVisitedCountries}/>
+      {/* <CountriesContainer countries={countries} visitedCountries={visitedCountries} setVisitedCountries={setVisitedCountries} handleChange={handleChange}/> */}
+      <CountriesVisitedContainer visitedCountries={visitedCountries}/>
     </>
   );
 }

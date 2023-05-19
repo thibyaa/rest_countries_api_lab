@@ -7,13 +7,6 @@ const Country = ({country, setVisitedCountries, visitedCountries}) => {
     setChecked((prev) => !prev);
     if(visitedCountries) setVisitedCountries([...visitedCountries, country]);
   };
-  
-const checkedStatus = () => {
-    if(checked){
-        if(visitedCountries) setVisitedCountries([...visitedCountries, country]);
-    }
-}
-checkedStatus();
 
   return (
     <div>
@@ -24,6 +17,10 @@ checkedStatus();
             type="checkbox"
             id="checkbox"
             checked={checked}
+            // onChange={() => {
+            //     setChecked((prev) => !prev);
+            //     handleChange(country);
+            // }}
             onChange={handleChange}
           />
         </li>

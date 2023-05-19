@@ -1,8 +1,8 @@
 import Country from "../components/Country";
 
-const CountriesContainer = ({countries}) => {
+const CountriesContainer = ({countries, visitedCountries, setVisitedCountries, handleChange}) => {
 
-    const mapCountries = countries ? (countries.map(country => <Country country={country}/>)) : (<p> Bucket List Incoming </p>);
+    const mapCountries = countries ? (countries.map(country => <Country country={country} visitedCountries={visitedCountries} setVisitedCountries={setVisitedCountries} handleChange={handleChange}/>)) : (<p> Bucket List Incoming </p>);
 
   return (
     <>
